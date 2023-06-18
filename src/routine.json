@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "Bench Press",
+        "sets": [
+            {
+                "setNumber": 1,
+                "goalWeight": 20,
+                "goalReps": 10,
+                "weight": 0,
+                "reps": 0
+            },
+            {
+                "setNumber": 2,
+                "goalWeight": 30,
+                "goalReps": 8,
+                "weight": 0,
+                "reps": 0
+            },
+            {
+                "setNumber": 3,
+                "goalWeight": 40,
+                "goalReps": 6,
+                "weight": 0,
+                "reps": 0
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Back Squat",
+        "sets": [
+            {
+                "setNumber": 1,
+                "goalWeight": 20,
+                "goalReps": 10,
+                "weight": 0,
+                "reps": 0
+            },
+            {
+                "setNumber": 2,
+                "goalWeight": 30,
+                "goalReps": 8,
+                "weight": 0,
+                "reps": 0
+            }
+        ]
+    }
+]
