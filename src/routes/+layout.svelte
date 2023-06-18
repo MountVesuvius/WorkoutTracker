@@ -7,6 +7,7 @@
 <!-- Remove later -->
 <style lang="postcss">
   :global(html) {
-    background-color: theme(colors.black);
+    background-color: #18181A;
+    color: white;
   }
 </style>
