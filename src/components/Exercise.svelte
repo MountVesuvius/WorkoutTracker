@@ -3,18 +3,23 @@
     import { exercises, exerciseNum } from "../stores/exercise";
 
     export let exerciseName = "Bench";
-    let exerciseId = $exerciseNum;
-    $exerciseNum++;
+    export let exerciseId = 0;
+     /**
+     * @type {any[]}
+     */
 
 
-    let sets = [
-        { setNumber: 1, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
-        { setNumber: 2, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
-        { setNumber: 3, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
-        { setNumber: 4, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
-    ];
+    export let sets = [];
 
-    $exercises.push({id: exerciseId, name: exerciseName, sets: sets});
+
+    // let sets = [
+    //     { setNumber: 1, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
+    //     { setNumber: 2, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
+    //     { setNumber: 3, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
+    //     { setNumber: 4, goalWeight: 20, goalReps: 10, weight: 0, reps: 0 },
+    // ];
+
+    // $exercises[exerciseId].sets = sets;
 
     function addSet(){
 		var l = sets.length;
@@ -33,12 +38,18 @@
         console.log($exercises);
     }
 
+    function removeExercise(){
+        $exercises = $exercises.filter((item) => item.id != exerciseId);
+        console.log($exercises);
+    }
+
 </script>
 
 <div class="border-black border-1 rounded-md text-white px-4 my-4">
     <div class="flex flex-row justify-between">
         <h3>{exerciseName}</h3>
-        <button on:click={() => {console.log($exercises)}}>Check Data</button>
+        <button on:click={removeExercise}>Remove</button>
+        <button on:click={() => {console.log($exercises[exerciseId])}}>[?]</button>
     </div>
 
     <div class="text-white flex flex-row items-center justify-between py-2 text-center">
